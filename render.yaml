@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: node-app
+    buildCommand: npm install && npm run dev
+  - type: mongodb
+    name: mongodb
