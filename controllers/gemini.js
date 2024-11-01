@@ -1,12 +1,7 @@
-const { imageUrl,videoUrl } = require('./video');
+const { imageUrl, videoUrl } = require("./video");
 
 // Use the imported variables
-console.log(imageUrl + ' ' + videoUrl);
-
-
-
-
-
+console.log(imageUrl + " " + videoUrl);
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require("fs");
@@ -19,7 +14,9 @@ const genAI = new GoogleGenerativeAI("AIzaSyBSddIGO1UIl-QxLWDWmNrXXaYAbVaRHyE");
 async function fileToGenerativePart(pathOrUrl, mimeType) {
   if (pathOrUrl.startsWith("http")) {
     // Remote image
-    const response = await axios.get(pathOrUrl, { responseType: "arraybuffer" });
+    const response = await axios.get(pathOrUrl, {
+      responseType: "arraybuffer",
+    });
     const data = Buffer.from(response.data, "binary").toString("base64");
     return {
       inlineData: {

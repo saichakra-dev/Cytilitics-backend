@@ -1,28 +1,28 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const videoSchema = new mongoose.Schema(
-    {
-        imageUrl:{
-            type:String,
-            // required:true,
-        },
-        // videoUrl:{
-        //     type:String,
-        //     // required:true,
-        // },
-       Services:{
-            type:String,
-        },
-        Result:{
-            type:String,
-        },
-        Type:{
-            type:String,
-        }
+  {
+    imageUrl: {
+      type: String,
+      // required:true,
     },
-    {
-        timestamps:true,
-    }
-) ;
+    videoUrl: {
+      type: String,
+      // required:true,
+    },
+    Services: {
+      type: String,
+    },
+    Result: {
+      type: String,
+    },
+    Type: {
+      type: String,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-export default mongoose.model("Video",videoSchema);
+export default mongoose.model("Video", videoSchema);
