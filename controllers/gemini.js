@@ -8,7 +8,7 @@ const fs = require("fs");
 const axios = require("axios");
 
 // Access your API key as an environment variable (see "Set up your API key" above)
-const genAI = new GoogleGenerativeAI("AIzaSyBSddIGO1UIl-QxLWDWmNrXXaYAbVaRHyE");
+const genAI = new GoogleGenerativeAI("AIzaSyA6hp0IYDZBz9tc7m3-VMn9rSRG_mlZQSE");
 
 // Converts file information to a GoogleGenerativeAI.Part object.
 async function fileToGenerativePart(pathOrUrl, mimeType) {
