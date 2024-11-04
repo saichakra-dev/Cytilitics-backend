@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
-import {errorHandler} from "./middlewares/errorHandler.js";
+import { errorHandler } from "./middlewares/errorHandler.js";
 import videoRoutes from "./routes/video.js";
 
 dotenv.config();
@@ -17,12 +17,11 @@ app.use(express.json());
 
 app.use(errorHandler);
 
-//Routes
-app.use("/api/videos",videoRoutes);
+app.use("/api/videos", videoRoutes);
 
 //Listen to the requests
-app.listen(port,()=>{
-    //connect to the DB
-    connectDB();
-    console.log("Server Started listening on port",port);
+app.listen(port, () => {
+  //connect to the DB
+  connectDB();
+  console.log("Server Started listening on port", port);
 });
